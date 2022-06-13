@@ -30,8 +30,13 @@ jobs:
     - name: Generate Index
       run: |
         python generate.py
+    - name: Create Release
+      run: |
+        mkdir release
+        mv index.html release/index.html
+        mv small release/small
     - name: Deploy
       uses: peaceiris/actions-gh-pages@v3
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: .
+        publish_dir: release
