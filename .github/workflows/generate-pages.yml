@@ -35,8 +35,10 @@ jobs:
         mkdir release
         mv index.html release/index.html
         mv small release/small
-    - name: Deploy
-      uses: peaceiris/actions-gh-pages@v3
+    - name: Deploy to GitHub Pages
+      uses: crazy-max/ghaction-github-pages@v3
       with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: release
+          target_branch: gh-pages
+          build_dir: release
+      env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
