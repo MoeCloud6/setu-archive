@@ -1,0 +1,12 @@
+<html>
+    <head>
+        <title>Archived Images</title>
+    </head>
+    <body>
+        {% for it in items %}
+        <a href="https://cloudflare-ipfs.com/ipfs/{{it.hash}}" target="_blank">
+            <img src="./small/{{it.hash}}.jpg"/>
+        </a>
+        {% endfor %}
+    </body>
+</html>
