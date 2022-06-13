@@ -1,2 +1,8 @@
+<<<<<<< HEAD
 /index.html
 /venv
+=======
+index.html
+/venv
+/release
+>>>>>>> 88b727c5002ac62ded77162fd8ebd31e6ddbc8f2
