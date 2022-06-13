@@ -30,9 +30,8 @@ jobs:
     - name: Generate Index
       run: |
         python generate.py
-    - name: Deploy 🚀
-      uses: JamesIves/github-pages-deploy-action@v4.3.3
+    - name: Deploy
+      uses: peaceiris/actions-gh-pages@v3
       with:
-        token: Moecloud6@${{ secrets.GH_TOKEN }}
-        branch: gh-pages # The branch the action should deploy to.
-        folder: .
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: .
