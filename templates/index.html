@@ -4,7 +4,7 @@
     </head>
     <body>
         {% for it in items %}
-        <a href="https://cloudflare-ipfs.com/ipfs/{{it.hash}}" target="_blank">
+        <a href="https://{{it.hash}}.ipfs.infura-ipfs.io/" target="_blank">
             <img src="./small/{{it.hash}}.jpg"/>
         </a>
         {% endfor %}
